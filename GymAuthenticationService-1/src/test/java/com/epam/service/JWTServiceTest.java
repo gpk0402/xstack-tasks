@@ -1,4 +1,4 @@
-package com.example.demo.servicetest;
+package com.epam.service;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

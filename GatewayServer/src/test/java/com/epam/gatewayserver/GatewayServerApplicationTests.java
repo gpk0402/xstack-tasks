@@ -3,7 +3,7 @@ package com.epam.gatewayserver;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest(classes = GatewayServerApplicationTests.class)
 class GatewayServerApplicationTests {
 
 	@Test

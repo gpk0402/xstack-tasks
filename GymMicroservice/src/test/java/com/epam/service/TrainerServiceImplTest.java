@@ -82,15 +82,15 @@ class TrainerServiceImplTest {
     {
     	trainerDto = new TrainerDto();
         trainer=new Trainer();
-        trainerDto.setEmail("lavanya@gmail.com");
-        trainerDto.setFirstName("muvva");
-        trainerDto.setLastName("lavanya");
+        trainerDto.setEmail("test@gmail.com");
+        trainerDto.setFirstName("test");
+        trainerDto.setLastName("test");
         trainerDto.setSpecialization("Zumba");
         
         user=new User();
-        user.setUsername("lavanya");
+        user.setUsername("test");
         user.setPassword("1234");
-        user.setEmail("lavanya1@gmail.com");
+        user.setEmail("test@gmail.com");
         user.setActive(true);
         
         trainer.setUser(user);
@@ -101,19 +101,19 @@ class TrainerServiceImplTest {
         trainer.setTrainingType(trainingType);
         
         dto=new NotificationDto().builder().subject("Registration Successfull").toEmails(List.of(user.getEmail()))
-				.ccEmails(List.of()).body("Dear User your login credentials are :\n" + "Username :" + "lavanya"
+				.ccEmails(List.of()).body("Dear User your login credentials are :\n" + "Username :" + "test"
 				+ "\n" + "Password :" + "1234")
 		.build();
         
         credentialsDto=new CredentialsDto();
-        credentialsDto.setUsername("lavanya");
+        credentialsDto.setUsername("test");
         credentialsDto.setPassword("1234");
         
         trainerUpdateDto=new TrainerUpdateDto();
-        trainerUpdateDto.setUsername("lavanya");
+        trainerUpdateDto.setUsername("test");
         
         trainerTrainingsList = new TrainerTrainingsList();
-        trainerTrainingsList.setUsername("lavanya");
+        trainerTrainingsList.setUsername("test");
 
     }
     

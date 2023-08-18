@@ -67,7 +67,7 @@ import com.epam.utils.ServiceMapper;
 
         trainee = new Trainee();
         trainer = new Trainer();
-        User user=User.builder().email("lavanya@gmail.com").build();
+        User user=User.builder().email("test@gmail.com").build();
         trainee.setUser(user);
         trainer.setUser(user);
         trainee.setTrainerList(List.of(trainer));

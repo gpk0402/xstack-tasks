@@ -94,37 +94,37 @@ class TraineeServiceImplTest {
 	public void setUp() {
 		traineeDto = new TraineeDto();
 		trainee = new Trainee();
-		traineeDto.setEmail("lavanya@gmail.com");
-		traineeDto.setFirstName("muvva");
-		traineeDto.setLastName("lavanya");
-		traineeDto.setAddress("ponnur");
+		traineeDto.setEmail("test@gmail.com");
+		traineeDto.setFirstName("test");
+		traineeDto.setLastName("test");
+		traineeDto.setAddress("test");
 		traineeDto.setDateOfBirth(LocalDate.parse("2002-05-25"));
 
 		user = new User();
-		user.setUsername("lavanya");
+		user.setUsername("test");
 		user.setPassword("1234");
-		user.setEmail("lavanya1@gmail.com");
+		user.setEmail("test@gmail.com");
 		user.setActive(true);
 
-		trainee.setAddress("ponnur");
+		trainee.setAddress("test");
 		trainee.setDateOfBirth(LocalDate.parse("2002-05-25"));
 		;
 		trainee.setUser(user);
 
 		dto = new NotificationDto().builder().subject("Registration Successfull").toEmails(List.of(user.getEmail()))
-				.ccEmails(List.of()).body("Dear User your login credentials are :\n" + "Username :" + "lavanya" + "\n"
+				.ccEmails(List.of()).body("Dear User your login credentials are :\n" + "Username :" + "test" + "\n"
 						+ "Password :" + "1234")
 				.build();
 
 		credentialsDto = new CredentialsDto();
-		credentialsDto.setUsername("lavanya");
+		credentialsDto.setUsername("test");
 		credentialsDto.setPassword("1234");
 
 		traineeUpdateDto = new TraineeUpdateDto();
-		traineeUpdateDto.setUsername("lavanya");
+		traineeUpdateDto.setUsername("test");
 
 		traineeTrainingsList = new TraineeTrainingsList();
-		traineeTrainingsList.setUsername("lavanya");
+		traineeTrainingsList.setUsername("test");
 
 		trainer1 = new Trainer();
 		trainer1.setUser(user);

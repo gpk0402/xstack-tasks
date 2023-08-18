@@ -61,9 +61,9 @@ class TrainingReportServiceImplTest {
 	@Test
 	void testGetTrainingReport()
 	{
-		TrainingReport trainingReport=TrainingReport.builder().email("lavanya@gmail.com").firstName("Lavanya").lastName("muvva").status(true).trainingSummary(new HashMap<>()).build();
+		TrainingReport trainingReport=TrainingReport.builder().email("test@gmail.com").firstName("test").lastName("test").status(true).trainingSummary(new HashMap<>()).build();
 		when(mockReportRepository.findById(anyString())).thenReturn(Optional.of(trainingReport));
-		ReportDto result=reportService.getTrainingReportByUsername("Lavanya");
+		ReportDto result=reportService.getTrainingReportByUsername("test");
 		assertNotNull(result);
 	}
 	
@@ -71,7 +71,7 @@ class TrainingReportServiceImplTest {
 	void testGetTrainingReportWithTrainerNameNotPresent()
 	{
 		when(mockReportRepository.findById(anyString())).thenReturn(Optional.empty());
-		assertThrows(TrainingReportException.class,()->reportService.getTrainingReportByUsername("Lavanya"));
+		assertThrows(TrainingReportException.class,()->reportService.getTrainingReportByUsername("test"));
 	}
 
 }

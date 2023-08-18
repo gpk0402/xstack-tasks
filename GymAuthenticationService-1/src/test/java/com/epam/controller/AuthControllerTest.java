@@ -52,7 +52,7 @@ class AuthControllerTest {
             authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
             return new TestingAuthenticationToken(authRequest.getUsername(), authRequest.getPassword(), authorities);
         });
-        Mockito.when(service.generateToken(any(String.class))).thenReturn("Lavanya");
+        Mockito.when(service.generateToken(any(String.class))).thenReturn("test");
         mockMvc.perform(post("/auth/login")
                         .content(requestBody)
                         .contentType(MediaType.APPLICATION_JSON))
