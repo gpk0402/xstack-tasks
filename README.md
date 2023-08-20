@@ -1,1 +1,1 @@
-xstack-jenkins-task
+xstack-task
